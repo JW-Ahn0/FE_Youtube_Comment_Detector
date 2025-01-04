@@ -28,7 +28,7 @@ export default function Home() {
   const fetchChannels = async (query: string) => {
     setLoading(true); // 로딩 시작
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
       const token = process.env.NEXT_PUBLIC_TOKEN;
       console.log("apiUrl", apiUrl);
       console.log("token", token);
