@@ -30,11 +30,9 @@ export default function Home() {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
       const token = process.env.NEXT_PUBLIC_TOKEN;
-      console.log("apiUrl", apiUrl);
-      console.log("token", token);
       const response = await fetch(`${apiUrl}/search/channels?query=${query}`, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `${token}`,
         },
       });
       const result = await response.json();
